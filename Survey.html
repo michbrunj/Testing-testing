@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOC Potential Survey</title>
+  <link rel="stylesheet" href="AG_Landing_Calc_Style.css">
+</head>
+<body>
+  <header>
+    <h1>Calculate Your Farm's SOC Potential</h1>
+  </header>
+
+  <div class="container">
+    <form id="survey-form">
+      <label for="farm-name">Farm Name:</label>
+      <input type="text" id="farm-name" name="farm-name" required>
+
+      <label for="farm-location">Farm Location:</label>
+      <input type="text" id="farm-location" name="farm-location" required>
+
+      <label for="farm-size">Farm Size (ha):</label>
+      <input type="number" id="farm-size" name="farm-size" required min="1" placeholder="Enter size in hectares">
+
+      <label for="farm-type">Farm Type:</label>
+      <select id="farm-type" name="farm-type" required>
+        <option value="" disabled selected>Select farm type</option>
+        <option value="Grandes cultures">Grandes cultures</option>
+        <option value="Élevage">Élevage</option>
+        <option value="Cultures spécialisées : viticulture, arboriculture, PPAM, etc.">Cultures spécialisées : viticulture, arboriculture, PPAM, etc.</option>
+        <option value="Forêt, tourbières et zones humides">Forêt, tourbières et zones humides</option>
+        <option value="Systèmes mixtes : cultures + élevage">Systèmes mixtes : cultures + élevage</option>
+      </select>
+
+      <button type="button" id="start-survey" style="display:none;">Next</button>
+
+      <div id="question-container" style="display:none;">
+        <label id="question-label"></label>
+        <select id="question-select"></select>
+        <button type="button" id="next-question">Next</button>
+      </div>
+
+      <button type="submit" id="calculate-button" style="display:none;">Calculate Potential SOC</button>
+    </form>
+
+    <section id="result-section" style="display: none;">
+      <h2>Potential SOC Increase</h2>
+      <p id="result">Calculating...</p>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Agrable. All Rights Reserved.</p>
+  </footer>
+
+  <script src="survey.js"></script>
+</body>
+</html>
