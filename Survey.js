@@ -190,4 +190,3 @@ document.addEventListener('DOMContentLoaded', function () {
     }[farmType] || [];
   }
 });
-
